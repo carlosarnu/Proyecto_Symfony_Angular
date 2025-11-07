@@ -17,6 +17,7 @@ Este repositorio combina un backend en Symfony, un frontend en Angular y una bas
 
 1. **Git**  
    - Descarga desde [git-scm.com](https://git-scm.com/downloads) y acepta la instalación por defecto.
+   - Asegúrate de haber seguido los primeros pasos de configuración del campus antes de empezar este onboarding (Dualboot o MacOs instalaciones básicas y clave SSH configurada): https://campus-codearts.com/course/section.php?id=175
    - Si estás en Ubuntu recién instalado, actualiza primero los paquetes y añade utilidades básicas:  
      ```bash
      sudo apt update
