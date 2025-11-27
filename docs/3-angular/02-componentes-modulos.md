@@ -267,7 +267,6 @@ Nota: para hacer uso de routerlink hay que importar RouterModule en el archivo t
    c) Crea el template del botón en `back-to-landing-button-component.html`:
 
    ```html
-
 <a routerLink="/"
       class="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-700">
      <svg xmlns="http://www.w3.org/2000/svg"
