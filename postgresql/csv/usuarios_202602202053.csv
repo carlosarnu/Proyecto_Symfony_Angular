@@ -1,0 +1,4 @@
+"id","nombre","email","roles","fecha_registro"
+12,Ana Admin,ana.admin@example.com,"[""ROLE_ADMIN""]",2026-02-20 20:41:41.664 +0100
+13,Luis Usuario,luis.user@example.com,"[""ROLE_USER""]",2026-02-20 20:41:41.664 +0100
+14,María Lider,maria.user@example.com,"[""ROLE_USER"", ""ROLE_MANAGER""]",2026-02-20 20:41:41.664 +0100

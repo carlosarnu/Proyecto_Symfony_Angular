@@ -1,0 +1,38 @@
+<main class="mx-auto min-h-screen max-w-7xl bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 px-4 py-24 sm:px-8 sm:py-32 lg:px-16 transition-colors duration-500">
+  <!-- cabecera con botón volver, título y selector de tema -->
+  <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 border-b border-primary/50 dark:border-primary/30 pb-6">
+    <div class="flex items-center gap-4 w-full">
+      <app-back-to-landing-button class="inline-flex lg:hidden"></app-back-to-landing-button>
+
+      <app-page-title
+        class="text-primary dark:text-secondary w-full"
+        title="🎯 Just Check It!"
+        subtitle="Nunca más olvides tus tareas."
+      ></app-page-title>
+    </div>
+
+    <!-- Botón para cambiar tema -->
+    <button
+      (click)="toggleTheme()"
+      class="px-4 py-2 rounded-lg bg-gradient-to-r from-secondary to-primary text-white shadow-md hover:from-primary hover:to-secondary transition-all"
+      aria-label="Cambiar tema claro/oscuro"
+    >
+      {{ theme() === 'light' ? '🌙 Oscuro' : '☀️ Claro' }}
+    </button>
+  </div>
+
+  <!-- formulario con tarjeta colorida -->
+  <div class="mt-8 rounded-xl bg-gradient-to-r from-primary/20 to-secondary/20 dark:from-primary/30 dark:to-secondary/40 p-8 shadow-lg transition-all">
+    <app-task-form-component (submitted)="onTaskSubmitted($event)"></app-task-form-component>
+  </div>
+
+  <!-- filtros -->
+  <div class="mt-6 flex justify-between items-center">
+    <app-task-filters (apply)="onFiltersApply($event)"></app-task-filters>
+  </div>
+
+  <!-- lista de tareas -->
+  <div class="mt-6 rounded-xl bg-gradient-to-r from-white/80 to-primary/5 dark:from-slate-700/80 dark:to-primary/20 p-6 shadow-lg transition-all">
+    <app-task-list></app-task-list>
+  </div>
+</main>

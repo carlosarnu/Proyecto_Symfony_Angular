@@ -13,6 +13,7 @@ services:
         condition: service_healthy
     ports:
       - "8000:8000"
+    entrypoint: ["docker-entrypoint.sh"]
     command: >
       bash -c "
         until pg_isready -h db -U symfony -d symfony_db; do

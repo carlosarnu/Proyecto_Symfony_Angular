@@ -1,0 +1,57 @@
+<form [formGroup]="form" class="bg-white p-6 rounded-lg shadow-lg space-y-4" (ngSubmit)="onSubmit()">
+  <!-- Título -->
+  <div>
+    <label class="block text-sm font-semibold mb-1 text-primary">Título</label>
+    <input
+      type="text"
+      formControlName="titulo"
+      placeholder="Escribe el título de tu tarea"
+      class="w-full rounded-lg border border-gray-300 px-4 py-2 mb-2 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm"
+    />
+    <p *ngIf="form.controls['titulo'].touched && form.controls['titulo'].invalid" class="text-red-500 text-xs">El título es obligatorio (mín. 3 caracteres).</p>
+  </div>
+
+  <!-- Descripción -->
+  <div>
+    <label class="block text-sm font-semibold mb-1 text-primary">Descripción</label>
+    <textarea
+      formControlName="descripcion"
+      rows="3"
+      placeholder="Detalles de la tarea..."
+      class="w-full rounded-lg border border-gray-300 px-4 py-2 mb-2 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm"
+    ></textarea>
+    <p *ngIf="form.controls['descripcion'].touched && form.controls['descripcion'].invalid" class="text-red-500 text-xs">Máx. 500 caracteres.</p>
+  </div>
+
+  <!-- Estado -->
+  <div>
+    <label class="block text-sm font-semibold mb-1 text-primary">Estado</label>
+    <select
+      formControlName="estado"
+      class="w-full rounded-lg border border-gray-300 px-4 py-2 mb-2 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm bg-gradient-to-r from-green-100 to-green-50"
+    >
+      <option value="pendiente">Pendiente</option>
+      <option value="en progreso">En progreso</option>
+      <option value="completada">Completada</option>
+    </select>
+  </div>
+
+  <!-- Fecha límite -->
+  <div>
+    <label class="block text-sm font-semibold mb-1 text-primary">Fecha límite</label>
+    <input
+      type="date"
+      formControlName="fechaLimite"
+      class="w-full rounded-lg border border-gray-300 px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm"
+    />
+  </div>
+
+  <!-- Botón Guardar -->
+  <button
+    type="submit"
+    [disabled]="form.invalid"
+    class="w-full sm:w-auto rounded-lg bg-gradient-to-r from-primary to-primary-600 px-6 py-3 text-white font-bold hover:from-primary-600 hover:to-primary-700 shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+  >
+    Guardar 🎉
+  </button>
+</form>

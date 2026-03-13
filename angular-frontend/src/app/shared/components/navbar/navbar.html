@@ -1,0 +1,44 @@
+<!-- src/app/shared/components/navbar/navbar.html -->
+<nav
+  class="flex justify-between items-center p-4 transition-colors duration-300
+         bg-surface-light dark:bg-surface-dark text-text-light dark:text-text-dark shadow-md rounded-b-lg"
+>
+  <!-- Logo / Nombre App -->
+  <h1 class="font-bold text-xl">Just Check It!</h1>
+
+  <!-- Menú -->
+  <div class="flex items-center gap-4">
+    <!-- Botón Tareas -->
+    <a
+      routerLink="/tasks"
+      class="px-3 py-1 rounded-md hover:bg-primary/20 dark:hover:bg-primary-dark/30 transition"
+    >
+      Tareas
+    </a>
+
+    <!-- Botón Admin (solo si es admin) -->
+    <a
+      *ngIf="authStore.isAdmin()"
+      routerLink="/admin"
+      class="px-3 py-1 rounded-md hover:bg-secondary/20 dark:hover:bg-secondary-dark/30 transition"
+    >
+      Admin
+    </a>
+
+    <!-- Dark mode toggle -->
+    <button
+      (click)="onToggleDark()"
+      class="px-3 py-1 rounded-md border border-gray-400 dark:border-gray-600 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition"
+    >
+      {{ isDarkMode ? '🌙' : '☀️' }}
+    </button>
+
+    <!-- Logout -->
+    <button
+      (click)="logout()"
+      class="px-3 py-1 rounded-md bg-accent dark:bg-accent-dark text-white hover:bg-accent-dark dark:hover:bg-accent transition"
+    >
+      Logout
+    </button>
+  </div>
+</nav>

@@ -1,0 +1,14 @@
+<!-- src/app/shared/components/page-title/page-title.component.html -->
+<header class="space-y-3 text-center sm:text-left">
+  <!-- Título principal -->
+  <h1 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl">
+    {{ title }}
+  </h1>
+  
+  <!-- Subtítulo (solo se muestra si existe) -->
+  @if (subtitle) {
+    <p class="text-base leading-7 text-slate-600 sm:text-lg">
+      {{ subtitle }}
+    </p>
+  }
+</header>

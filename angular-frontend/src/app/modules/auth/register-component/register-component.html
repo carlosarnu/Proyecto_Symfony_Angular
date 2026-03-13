@@ -1,0 +1,59 @@
+<form
+  [formGroup]="form"
+  (ngSubmit)="onSubmit()"
+  class="mx-auto mt-12 max-w-md space-y-6 p-8 rounded-xl shadow-lg bg-surface-light dark:bg-surface-dark transition-colors duration-300"
+>
+  <h1 class="text-3xl font-bold text-primary dark:text-primary-dark text-center">
+    🎉 Crear cuenta en Just Check It!
+  </h1>
+
+  <!-- Nombre -->
+  <div>
+    <label class="block text-sm font-semibold mb-1 text-primary dark:text-primary-dark">Nombre</label>
+    <input
+      type="text"
+      formControlName="nombre"
+      placeholder="Tu nombre"
+      class="w-full rounded-lg border border-gray-300 px-4 py-2 mb-2 focus:outline-none focus:ring-2 focus:ring-primary dark:border-gray-600 dark:bg-gray-800 dark:text-slate-100 shadow-sm"
+    />
+    <p *ngIf="form.controls['nombre'].touched && form.controls['nombre'].invalid" class="text-red-500 text-xs">
+      El nombre es obligatorio.
+    </p>
+  </div>
+
+  <!-- Email -->
+  <div>
+    <label class="block text-sm font-semibold mb-1 text-primary dark:text-primary-dark">Email</label>
+    <input
+      type="email"
+      formControlName="email"
+      placeholder="correo@ejemplo.com"
+      class="w-full rounded-lg border border-gray-300 px-4 py-2 mb-2 focus:outline-none focus:ring-2 focus:ring-primary dark:border-gray-600 dark:bg-gray-800 dark:text-slate-100 shadow-sm"
+    />
+    <p *ngIf="form.controls['email'].touched && form.controls['email'].invalid" class="text-red-500 text-xs">
+      Ingresa un email válido.
+    </p>
+  </div>
+
+  <!-- Contraseña -->
+  <div>
+    <label class="block text-sm font-semibold mb-1 text-primary dark:text-primary-dark">Contraseña</label>
+    <input
+      type="password"
+      formControlName="password"
+      placeholder="Mínimo 6 caracteres"
+      class="w-full rounded-lg border border-gray-300 px-4 py-2 mb-2 focus:outline-none focus:ring-2 focus:ring-primary dark:border-gray-600 dark:bg-gray-800 dark:text-slate-100 shadow-sm"
+    />
+    <p *ngIf="form.controls['password'].touched && form.controls['password'].invalid" class="text-red-500 text-xs">
+      La contraseña debe tener al menos 6 caracteres.
+    </p>
+  </div>
+
+  <!-- Botón Registrarse -->
+  <button
+    [disabled]="loading || form.invalid"
+    class="w-full h-12 rounded-lg bg-gradient-to-r from-primary to-primary-600 text-white font-bold hover:from-primary-600 hover:to-primary-700 shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+  >
+    🚀 Registrarme
+  </button>
+</form>

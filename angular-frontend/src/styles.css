@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply font-sans bg-gray-100 text-gray-900;
+}
+
+/* pequeño estilo base para inputs y botones */
+input, button {
+  @apply rounded-md;
+}
