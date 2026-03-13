@@ -214,4 +214,4 @@ Ahora ya sabes cómo preparar tu entorno desde cero, ejecutar la aplicación en 
 Habiendo seguido estos pasos en tu máquina, ya puedes empezar a trabajar en los ejercicios de onboarding que están marcados en la tabla de issues del repositorio.
 
 
-Esta es mi nota para el ejercicio 4.1
+Esta es mi nota para el ejercicio 4.1: "Un cambio atómico"
