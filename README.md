@@ -212,3 +212,6 @@ Si prefieres no instalar dependencias, puedes levantar todo el stack con Docker.
 Ahora ya sabes cómo preparar tu entorno desde cero, ejecutar la aplicación en local para desarrollo y levantar todo con Docker cuando quieras validar el despliegue completo.
 
 Habiendo seguido estos pasos en tu máquina, ya puedes empezar a trabajar en los ejercicios de onboarding que están marcados en la tabla de issues del repositorio.
+
+
+Cambio Atómico
